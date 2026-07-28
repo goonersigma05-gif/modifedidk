@@ -485,28 +485,28 @@ do
 			set(default, defaultalpha)
 
 			Sat.InputBegan:Connect(function(input)
-				if not ignoreInput and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
+				if not ignoreInput and (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
 					slidingsaturation = true
 					update()
 				end
 			end)
 
 			Sat.InputEnded:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch then
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 					slidingsaturation = false
 					update()
 				end
 			end)
 
 			Hue.InputBegan:Connect(function(input)
-				if not ignoreInput and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
+				if not ignoreInput and (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
 					slidinghue = true
 					update()
 				end
 			end)
 
 			Hue.InputEnded:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch then
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
 					slidinghue = false
 					update()
 				end
@@ -1059,7 +1059,7 @@ do
 
 			NewButton.Parent = Page.Window.Elements.TabHolder
 			
-			local NewPage = Instance.new("Frame")
+			local NewPage = Instance.new("ScrollingFrame")
 			NewPage.Name = "NewPage"
 			NewPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			NewPage.BackgroundTransparency = 1
@@ -1067,6 +1067,10 @@ do
 			NewPage.BorderSizePixel = 0
 			NewPage.Position = UDim2.new(0, 6, 0, 6)
 			NewPage.Size = UDim2.new(1, -12, 1, -12)
+			NewPage.CanvasSize = UDim2.new(1, 0, 0, 0)
+			NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
+			NewPage.ScrollBarThickness = 6
+			NewPage.ScrollBarImageColor3 = Library.Accent
 			NewPage.Visible = false
 			NewPage.Parent = Page.Window.Elements.Holder
 
@@ -1076,7 +1080,8 @@ do
 			Left.BackgroundTransparency = 1
 			Left.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Left.BorderSizePixel = 0
-			Left.Size = UDim2.new(0.5, -4, 1, 0)
+			Left.Size = UDim2.new(0.5, -4, 0, 0)
+			Left.AutomaticSize = Enum.AutomaticSize.Y
 			Left.ZIndex = 2
 
 			local UIListLayout = Instance.new("UIListLayout")
@@ -1094,7 +1099,8 @@ do
 			Right.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Right.BorderSizePixel = 0
 			Right.Position = UDim2.new(0.5, 4, 0, 0)
-			Right.Size = UDim2.new(0.5, -4, 1, 0)
+			Right.Size = UDim2.new(0.5, -4, 0, 0)
+			Right.AutomaticSize = Enum.AutomaticSize.Y
 
 			local UIListLayout1 = Instance.new("UIListLayout")
 			UIListLayout1.Name = "UIListLayout"
@@ -1298,7 +1304,7 @@ do
 			NewWeapon.Size = UDim2.new(0.5, 0, 1, 0)
 			NewWeapon.Parent = Weapon.Page.Elements.WeaponInline
 			
-			local NewPage = Instance.new("Frame")
+			local NewPage = Instance.new("ScrollingFrame")
 			NewPage.Name = "NewPage"
 			NewPage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			NewPage.BackgroundTransparency = 1
@@ -1306,6 +1312,10 @@ do
 			NewPage.BorderSizePixel = 0
 			NewPage.Position = UDim2.new(0, 6, 0, 66)
 			NewPage.Size = UDim2.new(1, -12, 1, -72)
+			NewPage.CanvasSize = UDim2.new(1, 0, 0, 0)
+			NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
+			NewPage.ScrollBarThickness = 6
+			NewPage.ScrollBarImageColor3 = Library.Accent
 			NewPage.Visible = false
 			NewPage.Parent = Weapon.Page.Window.Elements.Holder
 
@@ -1315,7 +1325,8 @@ do
 			Left.BackgroundTransparency = 1
 			Left.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Left.BorderSizePixel = 0
-			Left.Size = UDim2.new(0.5, -4, 1, 0)
+			Left.Size = UDim2.new(0.5, -4, 0, 0)
+			Left.AutomaticSize = Enum.AutomaticSize.Y
 			Left.ZIndex = 2
 
 			local UIListLayout = Instance.new("UIListLayout")
@@ -1333,7 +1344,8 @@ do
 			Right.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Right.BorderSizePixel = 0
 			Right.Position = UDim2.new(0.5, 4, 0, 0)
-			Right.Size = UDim2.new(0.5, -4, 1, 0)
+			Right.Size = UDim2.new(0.5, -4, 0, 0)
+			Right.AutomaticSize = Enum.AutomaticSize.Y
 
 			local UIListLayout1 = Instance.new("UIListLayout")
 			UIListLayout1.Name = "UIListLayout"
@@ -2272,6 +2284,7 @@ do
 			ContentOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ContentOutline.Position = UDim2.new(0, 0, 1, 1)
 			ContentOutline.Size = UDim2.new(1, 0, 0, 0)
+			ContentOutline.ZIndex = 999
 			ContentOutline.Visible = false
 
 			local ContentInline = Instance.new("Frame")
@@ -2281,6 +2294,7 @@ do
 			ContentInline.BorderSizePixel = 0
 			ContentInline.Position = UDim2.new(0, 1, 0, 1)
 			ContentInline.Size = UDim2.new(1, -2, 1, -2)
+			ContentInline.ZIndex = 999
 
 			local UIListLayout = Instance.new("UIListLayout")
 			UIListLayout.Name = "UIListLayout"
@@ -2316,23 +2330,38 @@ do
 			Title.Visible = Dropdown.Name ~= nil and true or false
 			Title.Text = Dropdown.Name ~= nil and Dropdown.Name or ""
 
+			local function restoreDropdownParent()
+				ContentOutline.Parent = Outline
+				ContentOutline.Position = UDim2.new(0, 0, 1, 1)
+				ContentOutline.Size = UDim2.new(1, 0, 0, 0)
+			end
 			-- // Connections
 			Library:Connection(Inline.MouseButton1Down, function()
 				ContentOutline.Visible = not ContentOutline.Visible
 				if ContentOutline.Visible then
 					Icon.Text = "-"
-					NewList.ZIndex = 5
+					NewList.ZIndex = 999
+					local base = Dropdown.Window and Dropdown.Window.Elements.Base
+					if base then
+						local absPos = Inline.AbsolutePosition
+						local absSize = Inline.AbsoluteSize
+						ContentOutline.Position = UDim2.fromOffset(absPos.X, absPos.Y + absSize.Y + 1)
+						ContentOutline.Size = UDim2.fromOffset(absSize.X, 0)
+						ContentOutline.Parent = base
+					end
 				else
 					Icon.Text = "+"
 					NewList.ZIndex = 1
+					restoreDropdownParent()
 				end
 			end)
 			Library:Connection(game:GetService("UserInputService").InputBegan, function(Input)
-				if ContentOutline.Visible and Input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch  then
+				if ContentOutline.Visible and (Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch) then
 					if not Library:IsMouseOverFrame(ContentOutline) and not Library:IsMouseOverFrame(Inline) then
 						ContentOutline.Visible = false
 						NewList.ZIndex = 1
 						Icon.Text = "+"
+						restoreDropdownParent()
 					end
 				end
 			end)
@@ -2391,6 +2420,7 @@ do
 						ContentOutline.Visible = false
 						NewList.ZIndex = 1
 						Icon.Text = "+"
+						restoreDropdownParent()
 						Library.Flags[Dropdown.Flag] = option
 						Dropdown.Callback(option)
 					end
@@ -2416,6 +2446,7 @@ do
 					NewOption.BorderColor3 = Color3.fromRGB(0, 0, 0)
 					NewOption.BorderSizePixel = 0
 					NewOption.Size = UDim2.new(1, 0, 0, 14)
+					NewOption.ZIndex = 999
 
 					local OptionLabel = Instance.new("TextLabel")
 					OptionLabel.Name = "OptionLabel"
@@ -2431,6 +2462,7 @@ do
 					OptionLabel.BorderSizePixel = 0
 					OptionLabel.Position = UDim2.new(0, 4, 0, 0)
 					OptionLabel.Size = UDim2.new(1, 0, 1, 0)
+					OptionLabel.ZIndex = 999
 					OptionLabel.Parent = NewOption
 
 					NewOption.Parent = ContentInline
@@ -2591,6 +2623,7 @@ do
 			ContentOutline.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 			ContentOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ContentOutline.Size = UDim2.new(1, 0, 1, 0)
+			ContentOutline.ZIndex = 999
 
 			local ContentInline = Library:NewInstance("ScrollingFrame", true)
 			ContentInline.Name = "ContentInline"
@@ -2607,6 +2640,7 @@ do
 			ContentInline.BorderSizePixel = 0
 			ContentInline.Position = UDim2.new(0, 1, 0, 1)
 			ContentInline.Size = UDim2.new(1, -2, 1, -2)
+			ContentInline.ZIndex = 999
 
 			local UIListLayout = Instance.new("UIListLayout")
 			UIListLayout.Name = "UIListLayout"
@@ -2697,6 +2731,7 @@ do
 					NewOption.BorderColor3 = Color3.fromRGB(0, 0, 0)
 					NewOption.BorderSizePixel = 0
 					NewOption.Size = UDim2.new(1, 0, 0, 14)
+					NewOption.ZIndex = 999
 
 					local OptionLabel = Instance.new("TextLabel")
 					OptionLabel.Name = "OptionLabel"
@@ -2712,6 +2747,7 @@ do
 					OptionLabel.BorderSizePixel = 0
 					OptionLabel.Position = UDim2.new(0, 4, 0, 0)
 					OptionLabel.Size = UDim2.new(1, 0, 1, 0)
+					OptionLabel.ZIndex = 999
 					OptionLabel.Parent = NewOption
 
 					NewOption.Parent = ContentInline
@@ -4275,7 +4311,7 @@ do
 				
 				return NewIndicator
 			end
-			---
+			--
 			function Indicator:NewBar(Properties)
 				local NewBarInd = {
 					Name = Properties.Name or Properties.name or "New Value";
