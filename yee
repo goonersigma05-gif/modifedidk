@@ -580,6 +580,14 @@ do
 	function Library:updateNotifsPositions(position)
 		for i, v in pairs(Library.Notifs) do 
 			local Position = Vector2.new(20, 20)
+			
+			-- Set position based on NotificationPosition setting
+			if Library.NotificationPosition == "Top Right" then
+				Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X - 220, 20)
+			elseif Library.NotificationPosition == "Middle" then
+				Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X / 2 - 100, game:GetService("GuiService"):GetScreenResolution().Y / 2 + 50)
+			end
+			
 			game:GetService("TweenService"):Create(v.Container, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0,Position.X,0,Position.Y + (i * 25))}):Play()
 		end 
 	end
