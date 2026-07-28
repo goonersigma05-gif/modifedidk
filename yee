@@ -728,7 +728,7 @@ do
 			AccentOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			AccentOutline.ClipsDescendants = false
 			AccentOutline.Position = UDim2.new(0, 200, 0, 200)
-			AccentOutline.Size = UDim2.new(0, 550, 0, 600)
+			AccentOutline.Size = UDim2.new(0, 700, 0, 450)
 			AccentOutline.ZIndex = 2
 			AccentOutline.Text = ""
             AccentOutline.RichText = true
@@ -1052,7 +1052,7 @@ Title.RichText = true
 			
 			local Weapons = Instance.new("Frame")
 			Weapons.Name = "Weapons"
-			Weapons.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+			Weapons.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			Weapons.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Weapons.Position = UDim2.new(0, 6, 0, 6)
 			Weapons.Size = UDim2.new(1, -12, 0, 50)
