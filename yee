@@ -726,9 +726,10 @@ do
 			AccentOutline.AnchorPoint = Vector2.new(0,0)
 			AccentOutline.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
 			AccentOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			AccentOutline.BorderSizePixel = 0
 			AccentOutline.ClipsDescendants = false
 			AccentOutline.Position = UDim2.new(0, 200, 0, 200)
-			AccentOutline.Size = UDim2.new(0, 700, 0, 450)
+			AccentOutline.Size = UDim2.new(0, 700, 0, 400)
 			AccentOutline.ZIndex = 2
 			AccentOutline.Text = ""
             AccentOutline.RichText = true
@@ -740,8 +741,8 @@ do
 			Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Inline.BorderSizePixel = 0
 			Inline.ClipsDescendants = false
-			Inline.Position = UDim2.new(0, 1, 0, 1)
-			Inline.Size = UDim2.new(1, -2, 1, -2)
+			Inline.Position = UDim2.new(0, 0, 0, 1)
+			Inline.Size = UDim2.new(1, 0, 1, -1)
 			Inline.ZIndex = 2
 
 			local HolderOutline = Instance.new("Frame")
