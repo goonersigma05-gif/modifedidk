@@ -13,6 +13,7 @@ do
 		UnNamedFlags = 0;
 		ThemeObjects = {};
 		Holder = nil;
+		NotificationPosition = "Top Left";
 		Keys = {
 			[Enum.KeyCode.LeftShift] = "LShift",
 			[Enum.KeyCode.RightShift] = "RShift",
@@ -587,6 +588,13 @@ do
 		local notification = {Container = nil, Objects = {}}
 		--
 		local Position = Vector2.new(20, 20)
+		
+		-- Set position based on NotificationPosition setting
+		if Library.NotificationPosition == "Top Right" then
+			Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X - 220, 20)
+		elseif Library.NotificationPosition == "Middle" then
+			Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X / 2 - 100, game:GetService("GuiService"):GetScreenResolution().Y / 2 + 50)
+		end
 		--
 		local NotifContainer = Instance.new('Frame', Library.ScreenGUI)
 		NotifContainer.Name = "NotifContainer"
@@ -816,7 +824,7 @@ do
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
 			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
-			Title.Text = Window.Name .. '  <font color="rgb(255,0,0)">universal</font>'
+			Title.Text = Window.Name
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
 			Title.RichText = true
@@ -829,6 +837,23 @@ do
 			Title.Position = UDim2.new(0, 0, 0, 2)
 			Title.Size = UDim2.new(1, 0, 0, 20)
 			Title.Parent = Inline
+			
+			local Universal = Instance.new("TextLabel")
+			Universal.Name = "Universal"
+			Universal.FontFace = Font.fromEnum(Enum.Font.Arcade)
+			Universal.Text = "universal"
+			Universal.TextColor3 = Color3.fromRGB(255, 0, 0)
+			Universal.TextSize = 12
+			Universal.TextStrokeTransparency = 0
+			Universal.TextXAlignment = Enum.TextXAlignment.Right
+			Universal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Universal.BackgroundTransparency = 1
+			Universal.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Universal.BorderSizePixel = 0
+			Universal.Position = UDim2.new(0, 0, 0, 2)
+			Universal.Size = UDim2.new(1, -5, 0, 20)
+			Universal.ZIndex = 10
+			Universal.Parent = Inline
 			
 			local Resize = Instance.new("TextButton")
 			Resize.Name = "Resize"
