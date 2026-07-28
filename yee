@@ -1,4 +1,4 @@
--- // Coded by chromemyheart
+-- // Coded by _notportal
 -- Example at bottom
 --
 local Library = {};
@@ -339,7 +339,7 @@ do
 
 			local Color = Instance.new("TextButton")
 			Color.Name = "Color"
-			Color.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+			Color.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Color.Text = ""
 			Color.TextColor3 = Color3.fromRGB(0, 0, 0)
 			Color.TextSize = 14
@@ -623,7 +623,7 @@ do
 
 		local Value = Instance.new("TextLabel")
 		Value.Name = "Value"
-		Value.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+		Value.FontFace = Font.fromEnum(Enum.Font.Arcade)
 		Value.Text = message
          Value.RichText = true
 		Value.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -729,7 +729,7 @@ do
 			AccentOutline.BorderSizePixel = 0
 			AccentOutline.ClipsDescendants = false
 			AccentOutline.Position = UDim2.new(0, 200, 0, 200)
-			AccentOutline.Size = UDim2.new(0, 650, 0, 400)
+			AccentOutline.Size = UDim2.new(0, 600, 0, 400)
 			AccentOutline.ZIndex = 2
 			AccentOutline.Text = ""
             AccentOutline.RichText = true
@@ -815,7 +815,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.Text = Window.Name
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
@@ -832,7 +832,7 @@ do
 			
 			local Resize = Instance.new("TextButton")
 			Resize.Name = "Resize"
-			Resize.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+			Resize.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Resize.Text = ""
 			Resize.TextColor3 = Color3.fromRGB(0, 0, 0)
 			Resize.TextSize = 14
@@ -843,6 +843,7 @@ do
 			Resize.BorderSizePixel = 0
 			Resize.Position = UDim2.new(1, -15, 1, -15)
 			Resize.Size = UDim2.new(0, 20, 0, 20)
+			Resize.Visible = false
 			Resize.Parent = Inline
 			Resize.ZIndex = 100
 			
@@ -857,6 +858,7 @@ do
 			ImageLabel.BorderSizePixel = 0
 			ImageLabel.Size = UDim2.new(0,14,0,14)
 			ImageLabel.Position = UDim2.new(1, -14, 1, -14)
+			ImageLabel.Visible = false
 			ImageLabel.Parent = Inline
 
 			Inline.Parent = AccentOutline
@@ -936,7 +938,7 @@ do
 			--
 			local NewButton = Instance.new("TextButton")
 			NewButton.Name = "NewButton"
-			NewButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+			NewButton.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			NewButton.Text = ""
 			NewButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 			NewButton.TextSize = 14
@@ -966,7 +968,7 @@ do
 
 			local PageName = Instance.new("TextLabel")
 			PageName.Name = "PageName"
-			PageName.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			PageName.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			PageName.TextColor3 = Color3.fromRGB(145,145,145)
 			PageName.TextSize = 12
 			PageName.Text = Page.Name
@@ -1186,7 +1188,7 @@ do
 
 			local Value = Instance.new("TextLabel")
 			Value.Name = "Value"
-			Value.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Value.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Value.Text = Watermark.Name
 			Value.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Value.TextSize = 12
@@ -1377,7 +1379,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.Text = Section.Name
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
@@ -1507,7 +1509,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
 			Title.TextStrokeTransparency = 0
@@ -2039,7 +2041,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
 			Title.TextStrokeTransparency = 0
@@ -2261,7 +2263,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
 			Title.TextStrokeTransparency = 0
@@ -2823,7 +2825,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
 			Title.TextStrokeTransparency = 0
@@ -2962,7 +2964,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
 			Title.TextStrokeTransparency = 0
@@ -3353,7 +3355,7 @@ do
 
 			local Title = Instance.new("TextLabel")
 			Title.Name = "Title"
-			Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+			Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Title.TextSize = 12
 			Title.TextStrokeTransparency = 0
@@ -4029,7 +4031,7 @@ do
 			--
 			local NewButton = Instance.new("TextButton")
 			NewButton.Name = "NewButton"
-			NewButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+			NewButton.FontFace = Font.fromEnum(Enum.Font.Arcade)
 			NewButton.Text = ""
 			NewButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 			NewButton.TextSize = 14
@@ -4195,7 +4197,7 @@ do
 
 				local Title = Instance.new("TextLabel")
 				Title.Name = "Title"
-				Title.FontFace = Font.fromEnum(Enum.Font.RobotoMono)
+				Title.FontFace = Font.fromEnum(Enum.Font.Arcade)
 				Title.Text = NewIndicator.Name
 				Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Title.TextSize = 12
