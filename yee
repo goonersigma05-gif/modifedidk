@@ -483,29 +483,31 @@ do
 
 			set(default, defaultalpha)
 
+			local canInteract = false
+
 			Sat.InputBegan:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch  then
+				if canInteract and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
 					slidingsaturation = true
 					update()
 				end
 			end)
 
 			Sat.InputEnded:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch  then
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch then
 					slidingsaturation = false
 					update()
 				end
 			end)
 
 			Hue.InputBegan:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch  then
+				if canInteract and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
 					slidinghue = true
 					update()
 				end
 			end)
 
 			Hue.InputEnded:Connect(function(input)
-				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch  then
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch then
 					slidinghue = false
 					update()
 				end
@@ -530,7 +532,7 @@ do
 			end
 
 			Library:Connection(game:GetService("UserInputService").InputBegan, function(Input)
-				if ColorWindow.Visible and Input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch  then
+				if ColorWindow.Visible and (Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch) then
 					if not Library:IsMouseOverFrame(ColorWindow) and not Library:IsMouseOverFrame(Icon) and not Library:IsMouseOverFrame(parent) then
 						ColorWindow.Visible = false
 						parent.ZIndex = 1
@@ -541,6 +543,11 @@ do
 			Icon.MouseButton1Down:Connect(function()
 				ColorWindow.Visible = true
 				parent.ZIndex = 5
+				canInteract = false
+
+				task.wait()
+
+				canInteract = true
 
 				if slidinghue then
 					slidinghue = false
