@@ -1069,8 +1069,7 @@ do
 			NewPage.Size = UDim2.new(1, -12, 1, -12)
 			NewPage.CanvasSize = UDim2.new(1, 0, 0, 0)
 			NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
-			NewPage.ScrollBarThickness = 6
-			NewPage.ScrollBarImageColor3 = Library.Accent
+			NewPage.ScrollBarThickness = 0
 			NewPage.Visible = false
 			NewPage.Parent = Page.Window.Elements.Holder
 
@@ -1314,8 +1313,7 @@ do
 			NewPage.Size = UDim2.new(1, -12, 1, -72)
 			NewPage.CanvasSize = UDim2.new(1, 0, 0, 0)
 			NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
-			NewPage.ScrollBarThickness = 6
-			NewPage.ScrollBarImageColor3 = Library.Accent
+			NewPage.ScrollBarThickness = 0
 			NewPage.Visible = false
 			NewPage.Parent = Weapon.Page.Window.Elements.Holder
 
