@@ -5,7 +5,7 @@ local Library = {};
 do
 	Library = {
 		Open = true;
-		Accent = Color3.fromRGB(100, 180, 255);
+		Accent = Color3.fromRGB(90, 160, 220);
 		PageAmount = 0;
 		Pages = {};
 		Sections = {};
@@ -320,7 +320,7 @@ do
 			local ColorWindow = Instance.new("Frame")
 			ColorWindow.Name = "ColorWindow"
 			ColorWindow.AnchorPoint = Vector2.new(0.5, 0.5)
-			ColorWindow.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+			ColorWindow.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			ColorWindow.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ColorWindow.Parent = Icon
 			ColorWindow.Position = UDim2.new(1,0,1,2)
@@ -331,7 +331,7 @@ do
 
 			local ColorInline = Instance.new("Frame")
 			ColorInline.Name = "ColorInline"
-			ColorInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+			ColorInline.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 			ColorInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ColorInline.BorderSizePixel = 0
 			ColorInline.Position = UDim2.new(0, 1, 0, 1)
@@ -603,7 +603,7 @@ do
 		local Outline = Instance.new("Frame")
 		Outline.Name = "Outline"
 		Outline.AutomaticSize = Enum.AutomaticSize.X
-		Outline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+		Outline.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 		Outline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Outline.Position = UDim2.new(0.01, 0, 0.02, 0)
 		Outline.Size = UDim2.new(0, 0, 0, 16)
@@ -613,7 +613,7 @@ do
 
 		local Inline = Instance.new("Frame")
 		Inline.Name = "Inline"
-		Inline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+		Inline.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 		Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Inline.BorderSizePixel = 0
 		Inline.Position = UDim2.new(0, 1, 0, 1)
@@ -736,7 +736,7 @@ do
 
 			local Inline = Instance.new("Frame")
 			Inline.Name = "Inline"
-			Inline.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+			Inline.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Inline.BorderSizePixel = 0
 			Inline.ClipsDescendants = false
@@ -746,14 +746,14 @@ do
 
 			local HolderOutline = Instance.new("Frame")
 			HolderOutline.Name = "HolderOutline"
-			HolderOutline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+			HolderOutline.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			HolderOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			HolderOutline.Position = UDim2.new(0, 6, 0, 22)
 			HolderOutline.Size = UDim2.new(1, -12, 1, -28)
 
 			local HolderInline = Instance.new("Frame")
 			HolderInline.Name = "HolderInline"
-			HolderInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+			HolderInline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 			HolderInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			HolderInline.BorderSizePixel = 0
 			HolderInline.Position = UDim2.new(0, 1, 0, 1)
@@ -761,7 +761,7 @@ do
 
 			local PageOutline = Instance.new("Frame")
 			PageOutline.Name = "PageOutline"
-			PageOutline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+			PageOutline.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			PageOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			PageOutline.Position = UDim2.new(0, 4, 0, 26)
 			PageOutline.Size = UDim2.new(1, -8, 1, -30)
@@ -769,7 +769,7 @@ do
 
 			local PageInline = Instance.new("Frame")
 			PageInline.Name = "PageInline"
-			PageInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+			PageInline.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 			PageInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			PageInline.BorderSizePixel = 0
 			PageInline.Position = UDim2.new(0, 1, 0, 1)
@@ -838,9 +838,9 @@ Title.RichText = true
 			local ImageLabel = Instance.new("ImageLabel")
 			ImageLabel.Name = "ImageLabel"
 			ImageLabel.Image = "rbxassetid://9052792535"
-			ImageLabel.ImageColor3 = Color3.fromRGB(15, 15, 15)
+			ImageLabel.ImageColor3 = Color3.fromRGB(30, 30, 30)
 			ImageLabel.ScaleType = Enum.ScaleType.Tile
-			ImageLabel.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+			ImageLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			ImageLabel.BackgroundTransparency = 1
 			ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ImageLabel.BorderSizePixel = 0
@@ -930,14 +930,14 @@ Title.RichText = true
 			NewButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 			NewButton.TextSize = 14
 			NewButton.AutoButtonColor = false
-			NewButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+			NewButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 			NewButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			NewButton.BorderSizePixel = 0
 			NewButton.Size = UDim2.new(0, Page.Window.PageAmount and ((((Page.Window.Elements.Base.Size.X.Offset - 35) - ((Page.Window.PageAmount - 1) * 2)) / Page.Window.PageAmount)) - 3 or Page.Size, 1, 0);
 
 			local ButtonInline = Instance.new("Frame")
 			ButtonInline.Name = "ButtonInline"
-			ButtonInline.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+			ButtonInline.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 			ButtonInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ButtonInline.BorderSizePixel = 0
 			ButtonInline.Position = UDim2.new(0, 1, 0, 1)
@@ -1061,7 +1061,7 @@ Title.RichText = true
 
 			local WeaponInline = Instance.new("Frame")
 			WeaponInline.Name = "WeaponInline"
-			WeaponInline.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+			WeaponInline.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 			WeaponInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			WeaponInline.BorderSizePixel = 0
 			WeaponInline.Position = UDim2.new(0, 1, 0, 1)
@@ -1166,7 +1166,7 @@ Title.RichText = true
 
 			local Inline = Instance.new("Frame")
 			Inline.Name = "Inline"
-			Inline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+			Inline.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 			Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Inline.BorderSizePixel = 0
 			Inline.Position = UDim2.new(0, 1, 0, 1)
@@ -1341,7 +1341,7 @@ Title.RichText = true
 			local SectionOutline = Instance.new("Frame")
 			SectionOutline.Name = "SectionOutline"
 			SectionOutline.AutomaticSize = Enum.AutomaticSize.Y
-			SectionOutline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+			SectionOutline.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			SectionOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			SectionOutline.Size = UDim2.new(1, 0, 0, 20)
 			SectionOutline.Parent = Section.Side == "left" and Section.Page.Elements.Left or Section.Side == "right" and Section.Page.Elements.Right
@@ -1349,7 +1349,7 @@ Title.RichText = true
 
 			local SectionInline = Instance.new("Frame")
 			SectionInline.Name = "SectionInline"
-			SectionInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+			SectionInline.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
 			SectionInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			SectionInline.BorderSizePixel = 0
 			SectionInline.Position = UDim2.new(0, 1, 0, 1)
