@@ -5,7 +5,7 @@ local Library = {};
 do
 	Library = {
 		Open = true;
-		Accent = Color3.fromRGB(85, 170, 255);
+		Accent = Color3.fromRGB(100, 180, 255);
 		PageAmount = 0;
 		Pages = {};
 		Sections = {};
@@ -320,12 +320,8 @@ do
 			local ColorWindow = Instance.new("Frame")
 			ColorWindow.Name = "ColorWindow"
 			ColorWindow.AnchorPoint = Vector2.new(0.5, 0.5)
-			ColorWindow.BackgroundColor3 = Color3.fromRGB(32, 32, 37)
+			ColorWindow.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 			ColorWindow.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			
-			local UICorner11 = Instance.new("UICorner")
-			UICorner11.CornerRadius = UDim.new(0, 6)
-			UICorner11.Parent = ColorWindow
 			ColorWindow.Parent = Icon
 			ColorWindow.Position = UDim2.new(1,0,1,2)
 			ColorWindow.AnchorPoint = Vector2.new(1,0)
@@ -335,13 +331,9 @@ do
 
 			local ColorInline = Instance.new("Frame")
 			ColorInline.Name = "ColorInline"
-			ColorInline.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
+			ColorInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 			ColorInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ColorInline.BorderSizePixel = 0
-			
-			local UICorner15 = Instance.new("UICorner")
-			UICorner15.CornerRadius = UDim.new(0, 5)
-			UICorner15.Parent = ColorInline
 			ColorInline.Position = UDim2.new(0, 1, 0, 1)
 			ColorInline.Size = UDim2.new(1, -2, 1, -2)
 
@@ -611,13 +603,9 @@ do
 		local Outline = Instance.new("Frame")
 		Outline.Name = "Outline"
 		Outline.AutomaticSize = Enum.AutomaticSize.X
-		Outline.BackgroundColor3 = Color3.fromRGB(35, 35, 40)
+		Outline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 		Outline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Outline.Position = UDim2.new(0.01, 0, 0.02, 0)
-		
-		local UICorner9 = Instance.new("UICorner")
-		UICorner9.CornerRadius = UDim.new(0, 6)
-		UICorner9.Parent = Outline
 		Outline.Size = UDim2.new(0, 0, 0, 16)
 		Outline.Parent = NotifContainer
 		Outline.BackgroundTransparency = 1
@@ -625,13 +613,9 @@ do
 
 		local Inline = Instance.new("Frame")
 		Inline.Name = "Inline"
-		Inline.BackgroundColor3 = Color3.fromRGB(28, 28, 33)
+		Inline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 		Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Inline.BorderSizePixel = 0
-		
-		local UICorner10 = Instance.new("UICorner")
-		UICorner10.CornerRadius = UDim.new(0, 5)
-		UICorner10.Parent = Inline
 		Inline.Position = UDim2.new(0, 1, 0, 1)
 		Inline.Size = UDim2.new(1, -2, 1, -2)
 		Inline.BackgroundTransparency = 1
@@ -750,70 +734,46 @@ do
             AccentOutline.RichText = true
 			AccentOutline.AutoButtonColor = false
 
-			local UICorner = Instance.new("UICorner")
-			UICorner.CornerRadius = UDim.new(0, 8)
-			UICorner.Parent = AccentOutline
-
 			local Inline = Instance.new("Frame")
 			Inline.Name = "Inline"
-			Inline.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
+			Inline.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 			Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Inline.BorderSizePixel = 0
 			Inline.ClipsDescendants = false
 			Inline.Position = UDim2.new(0, 1, 0, 1)
 			Inline.Size = UDim2.new(1, -2, 1, -2)
 			Inline.ZIndex = 2
-			
-			local UICorner2 = Instance.new("UICorner")
-			UICorner2.CornerRadius = UDim.new(0, 7)
-			UICorner2.Parent = Inline
 
 			local HolderOutline = Instance.new("Frame")
 			HolderOutline.Name = "HolderOutline"
-			HolderOutline.BackgroundColor3 = Color3.fromRGB(35, 35, 40)
+			HolderOutline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 			HolderOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			HolderOutline.Position = UDim2.new(0, 6, 0, 22)
 			HolderOutline.Size = UDim2.new(1, -12, 1, -28)
-			
-			local UICorner3 = Instance.new("UICorner")
-			UICorner3.CornerRadius = UDim.new(0, 6)
-			UICorner3.Parent = HolderOutline
 
 			local HolderInline = Instance.new("Frame")
 			HolderInline.Name = "HolderInline"
-			HolderInline.BackgroundColor3 = Color3.fromRGB(28, 28, 33)
+			HolderInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 			HolderInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			HolderInline.BorderSizePixel = 0
 			HolderInline.Position = UDim2.new(0, 1, 0, 1)
 			HolderInline.Size = UDim2.new(1, -2, 1, -2)
-			
-			local UICorner4 = Instance.new("UICorner")
-			UICorner4.CornerRadius = UDim.new(0, 5)
-			UICorner4.Parent = HolderInline
 
 			local PageOutline = Instance.new("Frame")
 			PageOutline.Name = "PageOutline"
-			PageOutline.BackgroundColor3 = Color3.fromRGB(32, 32, 37)
+			PageOutline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 			PageOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			PageOutline.Position = UDim2.new(0, 4, 0, 26)
-			
-			local UICorner5 = Instance.new("UICorner")
-			UICorner5.CornerRadius = UDim.new(0, 6)
-			UICorner5.Parent = PageOutline
 			PageOutline.Size = UDim2.new(1, -8, 1, -30)
 			PageOutline.ZIndex = 6
 
 			local PageInline = Instance.new("Frame")
 			PageInline.Name = "PageInline"
-			PageInline.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
+			PageInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 			PageInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			PageInline.BorderSizePixel = 0
 			PageInline.Position = UDim2.new(0, 1, 0, 1)
 			PageInline.Size = UDim2.new(1, -2, 1, -2)
-			
-			local UICorner6 = Instance.new("UICorner")
-			UICorner6.CornerRadius = UDim.new(0, 5)
-			UICorner6.Parent = PageInline
 			
 			PageInline.Parent = PageOutline
 
@@ -831,7 +791,7 @@ do
 			
 			local UIListLayout = Instance.new("UIListLayout")
 			UIListLayout.Name = "UIListLayout"
-			UIListLayout.Padding = UDim.new(0, 8)
+			UIListLayout.Padding = UDim.new(0, 0)
 			UIListLayout.FillDirection = Enum.FillDirection.Horizontal
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout.Parent = Tabs
@@ -878,9 +838,9 @@ Title.RichText = true
 			local ImageLabel = Instance.new("ImageLabel")
 			ImageLabel.Name = "ImageLabel"
 			ImageLabel.Image = "rbxassetid://9052792535"
-			ImageLabel.ImageColor3 = Color3.fromRGB(32, 32, 37)
+			ImageLabel.ImageColor3 = Color3.fromRGB(15, 15, 15)
 			ImageLabel.ScaleType = Enum.ScaleType.Tile
-			ImageLabel.BackgroundColor3 = Color3.fromRGB(32, 32, 37)
+			ImageLabel.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 			ImageLabel.BackgroundTransparency = 1
 			ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ImageLabel.BorderSizePixel = 0
@@ -970,23 +930,16 @@ Title.RichText = true
 			NewButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 			NewButton.TextSize = 14
 			NewButton.AutoButtonColor = false
-			NewButton.BackgroundColor3 = Color3.fromRGB(35, 35, 40)
+			NewButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			NewButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			NewButton.BorderSizePixel = 0
 			NewButton.Size = UDim2.new(0, Page.Window.PageAmount and ((((Page.Window.Elements.Base.Size.X.Offset - 35) - ((Page.Window.PageAmount - 1) * 2)) / Page.Window.PageAmount)) - 3 or Page.Size, 1, 0);
-			
-			local UICorner7 = Instance.new("UICorner")
-			UICorner7.CornerRadius = UDim.new(0, 5)
-			UICorner7.Parent = NewButton
 
 			local ButtonInline = Instance.new("Frame")
 			ButtonInline.Name = "ButtonInline"
-			ButtonInline.BackgroundColor3 = Color3.fromRGB(28, 28, 33)
+			ButtonInline.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 			ButtonInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ButtonInline.BorderSizePixel = 0
-			
-			local UICorner8 = Instance.new("UICorner")
-			UICorner8.CornerRadius = UDim.new(0, 4)
-			UICorner8.Parent = ButtonInline
 			ButtonInline.Position = UDim2.new(0, 1, 0, 1)
 			ButtonInline.Size = UDim2.new(1, -2, 1, -2)
 			ButtonInline.ZIndex = 5
@@ -1023,7 +976,7 @@ Title.RichText = true
 
 			local Line = Instance.new("Frame")
 			Line.Name = "Line"
-			Line.BackgroundColor3 = Color3.fromRGB(40, 40, 45)
+			Line.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 			Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Line.BorderSizePixel = 0
 			Line.Position = UDim2.new(0, 1, 1, -2)
@@ -1108,13 +1061,9 @@ Title.RichText = true
 
 			local WeaponInline = Instance.new("Frame")
 			WeaponInline.Name = "WeaponInline"
-			WeaponInline.BackgroundColor3 = Color3.fromRGB(28, 28, 33)
+			WeaponInline.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 			WeaponInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			WeaponInline.BorderSizePixel = 0
-			
-			local UICorner12 = Instance.new("UICorner")
-			UICorner12.CornerRadius = UDim.new(0, 4)
-			UICorner12.Parent = WeaponInline
 			WeaponInline.Position = UDim2.new(0, 1, 0, 1)
 			WeaponInline.Size = UDim2.new(1, -2, 1, -2)
 
@@ -1217,15 +1166,11 @@ Title.RichText = true
 
 			local Inline = Instance.new("Frame")
 			Inline.Name = "Inline"
-			Inline.BackgroundColor3 = Color3.fromRGB(28, 28, 33)
+			Inline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 			Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Inline.BorderSizePixel = 0
 			Inline.Position = UDim2.new(0, 1, 0, 1)
 			Inline.Size = UDim2.new(1, -2, 1, -2)
-			
-			local UICorner16 = Instance.new("UICorner")
-			UICorner16.CornerRadius = UDim.new(0, 4)
-			UICorner16.Parent = Inline
 
 			local Value = Instance.new("TextLabel")
 			Value.Name = "Value"
@@ -1396,27 +1341,19 @@ Title.RichText = true
 			local SectionOutline = Instance.new("Frame")
 			SectionOutline.Name = "SectionOutline"
 			SectionOutline.AutomaticSize = Enum.AutomaticSize.Y
-			SectionOutline.BackgroundColor3 = Color3.fromRGB(35, 35, 40)
+			SectionOutline.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 			SectionOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			SectionOutline.Size = UDim2.new(1, 0, 0, 20)
 			SectionOutline.Parent = Section.Side == "left" and Section.Page.Elements.Left or Section.Side == "right" and Section.Page.Elements.Right
 			SectionOutline.ZIndex = 10 - #Section.Page.Sections
-			
-			local UICorner13 = Instance.new("UICorner")
-			UICorner13.CornerRadius = UDim.new(0, 6)
-			UICorner13.Parent = SectionOutline
 
 			local SectionInline = Instance.new("Frame")
 			SectionInline.Name = "SectionInline"
-			SectionInline.BackgroundColor3 = Color3.fromRGB(28, 28, 33)
+			SectionInline.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
 			SectionInline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			SectionInline.BorderSizePixel = 0
 			SectionInline.Position = UDim2.new(0, 1, 0, 1)
 			SectionInline.Size = UDim2.new(1, -2, 1, -2)
-			
-			local UICorner14 = Instance.new("UICorner")
-			UICorner14.CornerRadius = UDim.new(0, 5)
-			UICorner14.Parent = SectionInline
 
 			local Accent = Library:NewInstance("Frame", true)
 			Accent.Name = "Accent"
