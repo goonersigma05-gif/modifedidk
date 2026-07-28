@@ -1,4 +1,3 @@
--- // Coded by _notportal
 -- Example at bottom
 --
 local Library = {};
@@ -827,7 +826,7 @@ do
 			Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Title.BorderSizePixel = 0
 			Title.Position = UDim2.new(0, 0, 0, 2)
-			Title.Size = UDim2.new(1, 0, 0, 20)
+			Title.Size = UDim2.new(1, -100, 0, 20)
 			Title.Parent = Inline
 			
 			local Universal = Instance.new("TextLabel")
@@ -842,8 +841,8 @@ do
 			Universal.BackgroundTransparency = 1
 			Universal.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Universal.BorderSizePixel = 0
-			Universal.Position = UDim2.new(0, 0, 0, 2)
-			Universal.Size = UDim2.new(1, -10, 0, 20)
+			Universal.Position = UDim2.new(1, -90, 0, 2)
+			Universal.Size = UDim2.new(0, 80, 0, 20)
 			Universal.ZIndex = 10
 			Universal.Parent = Inline
 			
