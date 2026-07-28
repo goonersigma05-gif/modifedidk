@@ -426,6 +426,7 @@ do
 			local slidingsaturation = false
 			local slidinghue = false
 			local slidingalpha = false
+			local ignoreInput = false
 
 			local function update()
 				local real_pos = game:GetService("UserInputService"):GetMouseLocation()
@@ -483,10 +484,8 @@ do
 
 			set(default, defaultalpha)
 
-			local canInteract = false
-
 			Sat.InputBegan:Connect(function(input)
-				if canInteract and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
+				if not ignoreInput and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
 					slidingsaturation = true
 					update()
 				end
@@ -500,7 +499,7 @@ do
 			end)
 
 			Hue.InputBegan:Connect(function(input)
-				if canInteract and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
+				if not ignoreInput and (input.UserInputType == Enum.UserInputType.MouseButton1 or Enum.UserInputType.Touch) then
 					slidinghue = true
 					update()
 				end
@@ -514,7 +513,7 @@ do
 			end)
 
 			Library:Connection(game:GetService("UserInputService").InputChanged, function(input)
-				if input.UserInputType == Enum.UserInputType.MouseMovement or Enum.UserInputType.Touch  then
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 					if slidinghue then
 						update()
 					end
@@ -540,14 +539,16 @@ do
 				end
 			end)
 
+			Library:Connection(game:GetService("UserInputService").InputEnded, function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					ignoreInput = false
+				end
+			end)
+
 			Icon.MouseButton1Down:Connect(function()
 				ColorWindow.Visible = true
 				parent.ZIndex = 5
-				canInteract = false
-
-				task.wait()
-
-				canInteract = true
+				ignoreInput = true
 
 				if slidinghue then
 					slidinghue = false
