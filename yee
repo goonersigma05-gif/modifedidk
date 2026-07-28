@@ -4275,7 +4275,7 @@ do
 				
 				return NewIndicator
 			end
-			--
+			---
 			function Indicator:NewBar(Properties)
 				local NewBarInd = {
 					Name = Properties.Name or Properties.name or "New Value";
