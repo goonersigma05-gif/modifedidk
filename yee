@@ -1214,6 +1214,7 @@ Title.RichText = true
 			Accent.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Accent.BorderSizePixel = 0
 			Accent.Size = UDim2.new(1, 0, 0, 1)
+			Accent.Visible = false
 			Accent.Parent = Outline
 			
 			-- // Functions
