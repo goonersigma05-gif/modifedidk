@@ -844,6 +844,7 @@ do
 			Universal.BorderSizePixel = 0
 			Universal.Position = UDim2.new(0, 0, 0, 2)
 			Universal.Size = UDim2.new(1, -10, 0, 20)
+			Universal.ZIndex = 10
 			Universal.Parent = Inline
 			
 			local Resize = Instance.new("TextButton")
