@@ -2631,8 +2631,7 @@ do
 			ContentInline.BottomImage = "rbxassetid://7783554086"
 			ContentInline.CanvasSize = UDim2.new()
 			ContentInline.MidImage = "rbxassetid://7783554086"
-			ContentInline.ScrollBarImageColor3 = Library.Accent
-			ContentInline.ScrollBarThickness = 4
+			ContentInline.ScrollBarThickness = 0
 			ContentInline.TopImage = "rbxassetid://7783554086"
 			ContentInline.Active = true
 			ContentInline.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
@@ -3678,8 +3677,7 @@ do
 			List.BottomImage = "rbxassetid://7783554086"
 			List.CanvasSize = UDim2.new()
 			List.MidImage = "rbxassetid://7783554086"
-			List.ScrollBarImageColor3 = Library.Accent
-			List.ScrollBarThickness = 8
+			List.ScrollBarThickness = 0
 			List.TopImage = "rbxassetid://7783554086"
 			List.Active = true
 			List.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
