@@ -583,9 +583,9 @@ do
 			
 			-- Set position based on NotificationPosition setting
 			if Library.NotificationPosition == "Top Right" then
-				Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X - 220, 20)
+				Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X - 380, 20)
 			elseif Library.NotificationPosition == "Middle" then
-				Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X / 2 - 100, game:GetService("GuiService"):GetScreenResolution().Y / 2 + 50)
+				Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X / 2 - 100, game:GetService("GuiService"):GetScreenResolution().Y / 2 + 150)
 			end
 			
 			game:GetService("TweenService"):Create(v.Container, TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0,Position.X,0,Position.Y + (i * 25))}):Play()
@@ -599,9 +599,9 @@ do
 		
 		-- Set position based on NotificationPosition setting
 		if Library.NotificationPosition == "Top Right" then
-			Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X - 220, 20)
+			Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X - 380, 20)
 		elseif Library.NotificationPosition == "Middle" then
-			Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X / 2 - 100, game:GetService("GuiService"):GetScreenResolution().Y / 2 + 50)
+			Position = Vector2.new(game:GetService("GuiService"):GetScreenResolution().X / 2 - 100, game:GetService("GuiService"):GetScreenResolution().Y / 2 + 150)
 		end
 		--
 		local NotifContainer = Instance.new('Frame', Library.ScreenGUI)
