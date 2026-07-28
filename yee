@@ -933,7 +933,7 @@ do
 				end
 			end)
 			Library:Connection(game:GetService("UserInputService").InputBegan, function(Input)
-				if Input.KeyCode == Library.UIKey then
+				if Input.KeyCode == Library.UIKey or Input.UserInputType == Library.UIKey then
 					Library:SetOpen(not Library.Open)
 				end
 			end)
