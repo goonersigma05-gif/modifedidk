@@ -724,7 +724,7 @@ do
 			local AccentOutline = Library:NewInstance("TextButton", true)
 			AccentOutline.Name = "AccentOutline"
 			AccentOutline.AnchorPoint = Vector2.new(0,0)
-			AccentOutline.BackgroundColor3 = Color3.fromRGB(30, 30, 35)
+			AccentOutline.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 			AccentOutline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			AccentOutline.BorderSizePixel = 0
 			AccentOutline.ClipsDescendants = false
@@ -734,6 +734,16 @@ do
 			AccentOutline.Text = ""
             AccentOutline.RichText = true
 			AccentOutline.AutoButtonColor = false
+			
+			-- Top accent line only
+			local TopAccent = Library:NewInstance("Frame", true)
+			TopAccent.Name = "TopAccent"
+			TopAccent.BackgroundColor3 = Library.Accent
+			TopAccent.BorderSizePixel = 0
+			TopAccent.Position = UDim2.new(0, 0, 0, 0)
+			TopAccent.Size = UDim2.new(1, 0, 0, 2)
+			TopAccent.ZIndex = 3
+			TopAccent.Parent = AccentOutline
 
 			local Inline = Instance.new("Frame")
 			Inline.Name = "Inline"
@@ -741,8 +751,8 @@ do
 			Inline.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Inline.BorderSizePixel = 0
 			Inline.ClipsDescendants = false
-			Inline.Position = UDim2.new(0, 0, 0, 1)
-			Inline.Size = UDim2.new(1, 0, 1, -1)
+			Inline.Position = UDim2.new(0, 0, 0, 2)
+			Inline.Size = UDim2.new(1, 0, 1, -2)
 			Inline.ZIndex = 2
 
 			local HolderOutline = Instance.new("Frame")
