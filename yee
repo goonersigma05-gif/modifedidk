@@ -2345,7 +2345,8 @@ do
 					if base then
 						local absPos = Inline.AbsolutePosition
 						local absSize = Inline.AbsoluteSize
-						ContentOutline.Position = UDim2.fromOffset(absPos.X, absPos.Y + absSize.Y + 1)
+						local basePos = base.AbsolutePosition
+						ContentOutline.Position = UDim2.fromOffset(absPos.X - basePos.X, absPos.Y - basePos.Y + absSize.Y + 1)
 						ContentOutline.Size = UDim2.fromOffset(absSize.X, 0)
 						ContentOutline.Parent = base
 					end
