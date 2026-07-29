@@ -1316,6 +1316,7 @@ do
 			NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
 			NewPage.ScrollBarThickness = 0
 			NewPage.ScrollingDirection = Enum.ScrollingDirection.Y
+			NewPage.ClipsDescendants = false
 			NewPage.Visible = false
 			NewPage.Parent = Weapon.Page.Window.Elements.Holder
 
@@ -1328,6 +1329,7 @@ do
 			Left.Size = UDim2.new(0.5, -4, 0, 0)
 			Left.AutomaticSize = Enum.AutomaticSize.Y
 			Left.ZIndex = 2
+			Left.ClipsDescendants = false
 
 			local UIListLayout = Instance.new("UIListLayout")
 			UIListLayout.Name = "UIListLayout"
@@ -2340,19 +2342,17 @@ do
 				ContentOutline.Visible = not ContentOutline.Visible
 				if ContentOutline.Visible then
 					Icon.Text = "-"
-					NewList.ZIndex = 999
 					local base = Dropdown.Window and Dropdown.Window.Elements.Base
 					if base then
 						local absPos = Inline.AbsolutePosition
 						local absSize = Inline.AbsoluteSize
-						local basePos = base.AbsolutePosition
-						ContentOutline.Position = UDim2.fromOffset(absPos.X - basePos.X, absPos.Y - basePos.Y + absSize.Y + 1)
+						local bp = base.AbsolutePosition
+						ContentOutline.Position = UDim2.fromOffset(absPos.X - bp.X, absPos.Y - bp.Y + absSize.Y + 1)
 						ContentOutline.Size = UDim2.fromOffset(absSize.X, 0)
 						ContentOutline.Parent = base
 					end
 				else
 					Icon.Text = "+"
-					NewList.ZIndex = 1
 					restoreDropdownParent()
 				end
 			end)
