@@ -1316,7 +1316,6 @@ do
 			NewPage.AutomaticCanvasSize = Enum.AutomaticSize.Y
 			NewPage.ScrollBarThickness = 0
 			NewPage.ScrollingDirection = Enum.ScrollingDirection.Y
-			NewPage.ClipsDescendants = false
 			NewPage.Visible = false
 			NewPage.Parent = Weapon.Page.Window.Elements.Holder
 
@@ -1329,7 +1328,6 @@ do
 			Left.Size = UDim2.new(0.5, -4, 0, 0)
 			Left.AutomaticSize = Enum.AutomaticSize.Y
 			Left.ZIndex = 2
-			Left.ClipsDescendants = false
 
 			local UIListLayout = Instance.new("UIListLayout")
 			UIListLayout.Name = "UIListLayout"
