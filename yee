@@ -2176,7 +2176,7 @@ do
 		function Sections:List(Properties)
 			local Properties = Properties or {};
 			local Dropdown = {
-				Window = self.Window,
+				Window = self.Page and self.Page.Page and self.Page.Page.Window,
 				Page = self.Page,
 				Section = self,
 				Open = false,
@@ -2566,7 +2566,7 @@ do
 		function Sections:ListBox(Properties)
 			local Properties = Properties or {};
 			local Dropdown = {
-				Window = self.Window,
+				Window = self.Page and self.Page.Page and self.Page.Page.Window,
 				Page = self.Page,
 				Section = self,
 				Open = false,
