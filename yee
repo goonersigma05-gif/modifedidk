@@ -1973,7 +1973,10 @@ do
 					SetState()
 				end
 			end
-			Toggle.Set(Toggle.State)
+			-- Initialize toggle state properly
+			if Toggle.State then
+				SetState()
+			end
 			Library.Flags[Toggle.Flag] = Toggle.State
 			Flags[Toggle.Flag] = Toggle.Set
 
