@@ -1651,7 +1651,7 @@ do
 				local Value = Instance.new("TextLabel")
 				Value.Name = "Value"
 				Value.FontFace = Font.fromEnum(Enum.Font.ArialBold)
-				Value.Text = "MB2"
+				Value.Text = "None"
 				Value.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Value.TextSize = 12
 				Value.TextStrokeTransparency = 0
@@ -3074,7 +3074,7 @@ do
 			local Value = Instance.new("TextLabel")
 			Value.Name = "Value"
 			Value.FontFace = Font.fromEnum(Enum.Font.ArialBold)
-			Value.Text = "MB2"
+			Value.Text = "None"
 			Value.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Value.TextSize = 12
 			Value.TextStrokeTransparency = 0
