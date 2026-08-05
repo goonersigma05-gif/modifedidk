@@ -1969,15 +1969,14 @@ do
 			-- // Misc Functions
 			function Toggle.Set(bool)
 				bool = type(bool) == "boolean" and bool or false
-				if Toggle.Toggled ~= bool then
-					SetState()
-				end
+				-- Set directly instead of toggling
+				Toggle.Toggled = bool
+				Accent.Visible = bool
+				Library.Flags[Toggle.Flag] = bool
+				Toggle.Callback(bool)
 			end
-			-- Initialize toggle state properly
-			if Toggle.State then
-				SetState()
-			end
-			Library.Flags[Toggle.Flag] = Toggle.State
+			-- Initialize with the default state
+			Toggle.Set(Toggle.State)
 			Flags[Toggle.Flag] = Toggle.Set
 
 			-- // Returning
